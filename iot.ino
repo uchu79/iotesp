@@ -30,6 +30,7 @@ int pinValue = param.asInt();
     digitalWrite(13,HIGH);
     digitalWrite(14,LOW);
     analogWrite(25,220);
+    digitalWrite(18,HIGH);
     digitalWrite(19,LOW);
     analogWrite(15,200);
 
@@ -38,6 +39,7 @@ int pinValue = param.asInt();
     digitalWrite(14,LOW);
     analogWrite(25,100);
     digitalWrite(18,HIGH);
+    digitalWrite(19,LOW);
     analogWrite(15,100);
     pixels.setPixelColor(0, 0x000000);
     pixels.setPixelColor(1, 0x000000);
@@ -57,6 +59,7 @@ int pinValue = param.asInt();
     pixels.setPixelColor(0, 0x3333ff);
     pixels.setPixelColor(1, 0x3333ff);
     pixels.setPixelColor(2, 0x3333ff);
+    pixels.setPixelColor(3, 0x3333ff);
     pixels.setPixelColor(4, 0x3333ff);
     pixels.show();
     pixels.show();
@@ -65,10 +68,7 @@ int pinValue = param.asInt();
 }
 
 
-void setup() {
-  Serial.begin(9600);
-  Blynk.begin(auth, ssid, pass);
-  pixels.begin();
+servo x;
 
   pinMode(13,OUTPUT);
  pinMode(14,OUTPUT);
