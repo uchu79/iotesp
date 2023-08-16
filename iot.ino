@@ -26,6 +26,8 @@ void setup() {
 
  motor.attach(pinServo);
  motor.write(angle);
+ cuba2;
+ try;
 
  }
 
