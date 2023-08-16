@@ -33,6 +33,8 @@ int pinValue = param.asInt();
     digitalWrite(18,HIGH);
     digitalWrite(19,LOW);
     analogWrite(15,200);
+    getaddultrasonic;
+    removetimesultrasonic;
 
   } else {
     digitalWrite(13,HIGH);
@@ -46,6 +48,7 @@ int pinValue = param.asInt();
     pixels.setPixelColor(2, 0x000000);
     pixels.setPixelColor(3, 0x000000);
     pixels.setPixelColor(4, 0x000000);
+    showaddremoveultrasonic
     pixels.show();
     pixels.show();
 
