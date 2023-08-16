@@ -16,6 +16,20 @@ char pass[] = "ha5379na";
 #include <Adafruit_NeoPixel.h>
  Adafruit_NeoPixel pixels = Adafruit_NeoPixel(5, 4, NEO_GRB + NEO_KHZ800);
 
+
+Servo motor; 
+
+int pinServo = 10;
+int angle = 0;
+
+void setup() {
+
+ motor.attach(pinServo);
+ motor.write(angle);
+
+ }
+
+ 
 BLYNK_WRITE(V0)
 {
 int pinValue = param.asInt();
@@ -33,8 +47,6 @@ int pinValue = param.asInt();
     digitalWrite(18,HIGH);
     digitalWrite(19,LOW);
     analogWrite(15,200);
-    getaddultrasonic;
-    removetimesultrasonic;
 
   } else {
     digitalWrite(13,HIGH);
@@ -48,7 +60,6 @@ int pinValue = param.asInt();
     pixels.setPixelColor(2, 0x000000);
     pixels.setPixelColor(3, 0x000000);
     pixels.setPixelColor(4, 0x000000);
-    showaddremoveultrasonic
     pixels.show();
     pixels.show();
 
